@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*Determina valores no documento todo*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;;
+}
+
+/*Organiza as secoes no centro e adiciona imagem de fundo*/
+body{
+    display: flex;  /*ativa o flexbox*/
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /*vh=viewport (min-height = altura minima )*/
+    background-image: url(./imagens/wallpaper.jpg); /* (./ é obrigatório porque sempre irá achar o endereço)*/
+    background-size: cover; /*ele adapta a imagem para o tamanho necessário na página*/
+    background-position: center;  /*Coloca o centro da imagem*/
+}
+
+/*Traz tamanho, cor, borda e sombra para a caixa*/
+.container{
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /*rgba= rgb com opacidade*/
+    border-radius: 10px;
+    color: white;
+    padding:30px 40px ;  /* é um atrás do outro porque o código entende que o primeiro numero é pra cima e sem seguida é pro lado*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); /*traz sombra para a caixa*/
+    backdrop-filter: blur(3px); /*Borra a imagem dentro*/
+}
+
+.container h1{  /*altera o h1 dentro do container*/
+    text-align: center;
+    font-size: 2em;
+}
+.caixa-botao{
+    width: 100%;
+    height: 50px;
+    margin  : 30px 0;
+    position: relative; /*Muda a posição do elemento de acordo com a necessidade*/
+}
+.caixa-botao input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 40px;
+    outline: none; /*tira a borda branca que fica ao clicar na caixa*/
+    color: white;
+    padding: 20px 45px 20px 20px;
+    
+}
+
+/*:: indica pseudo elemento e : indica pseudo classe, aqui só mudamos a cor do placeholder*/
+.caixa-botao input::placeholder{  
+    color: #686767;
+
+}
+
+/*Coloca o ícone dentro do input utilizando position */
+.caixa-botao i{
+    position: absolute; /*traz uma posição específica ao item */
+    right: 20px; /*da espaçamento á direita do item */
+    top: 30%;
+    font-size: 20px; /*tamanho do item*/
+}
+
+
+/*coloca cada item em uma ponta*/
+.lembrar-senha{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*da espaçamento no checkbox e cor */
+.lembrar-senha label input{
+    margin-right: 5px;
+    accent-color: #fff;  /*Deixa o checkbox branco*/
+}
+
+/*Muda a decoração tirando o traçado embaixo e coloca cor no texto*/
+.lembrar-senha a{
+    text-decoration: none;
+    color: white;
+}
+
+/*adiona o traçado em baixo da palavra quando o mouse estiver em cima*/
+.lembrar-senha a:hover{  
+    text-decoration: underline;
+}
+
+/*Mudou o layout do login*/
+.login{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #333;
+    font-weight: 600; /*marcação da cor( deixa a cor mais forte)*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+    cursor: pointer; /*Muda o cursor quando pass em cima do login*/
+}
+
+/* Muda o comportamento do login quando passa o mouse por ele*/
+.login:hover{
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    transition: 0.5s;  /*transição para a caixa (para não ficar uma mudança tão seca0*/
+}
+
+/*Alteramos o tamanho da fonte e alinhamos ao centro*/
+.registro{
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+/*Muda a decoração do texto e o peso dela*/
+.registro a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+/*Adiciona o underline quando o mouse está sob ele*/
+.registro a:hover{
+    text-decoration: underline;
+}
+

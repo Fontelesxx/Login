@@ -58,7 +58,7 @@ body{
 
 /*:: indica pseudo elemento e : indica pseudo classe, aqui só mudamos a cor do placeholder*/
 .caixa-botao input::placeholder{  
-    color: #686767;
+    color: #ebe5e5;
 
 }
 
